@@ -900,6 +900,13 @@ class PlayState extends MusicBeatState
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
+		
+		var creditText:FlxText = new FlxText(876, 648, 348);
+		creditText.text = 'Ported By\nNecky';
+		creditText.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		creditText.cameras = [camHUD];
+		creditText.scrollFactor.set();
+		add(creditText);
 
 		// startCountdown();
 
